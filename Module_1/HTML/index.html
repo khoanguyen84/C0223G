@@ -4,6 +4,63 @@
         <link rel="icon" href="https://james.codegym.vn/pluginfile.php/1/theme_remui/faviconurl/1675179018/icon.png">
     </head>
     <body>
+        <!-- 
+            website
+            webpage
+         -->
+        <!-- a: anchor 
+            TH 1: Liên kết trong trang
+            TH 2: Liên kết giữa các trang webpage(s) trong 1 website
+            TH 3: Liên kết với 1 tài nguyên bên ngoài website 
+            TH 4: Chức năng download
+        -->
+        <a href="home.html" target="_blank">Go to home page</a>
+        <br>
+        <a href="https://www.google.com/" target="_blank">Go to google</a>
+        <p>Please click on here to <a href="resources/document.rar">download</a> document</p>
+        <p>Please click on here to <a download="cv" href="resources/JAVA_FRESHER_PHUOC_NGUYEN.pdf">show</a> Phước'CV</p>
+        <!-- 
+            ul: Unorder List
+            ol: Order List
+                type
+            li: List Item
+         -->
+        <!-- copy
+            alt + shift + arrow key (up/down)
+          -->
+        <ol type="I">
+            <li>List Item 1
+                <ol type="a">
+                    <li>Nested Item 1.1</li>
+                    <li>Nested Item 1.2</li>
+                </ol>
+            </li>
+            <li>List Item 2
+                <ol>
+                    <li>Nested Item 2.1</li>
+                    <li>Nested Item 2.2
+                        <ul type="circle">
+                            <li>Nested Item 2.2.1</li>
+                            <li>Nested Item 2.2.2
+                                <ul type="square">
+                                    <li>Nested Item 2.2.2.1</li>
+                                    <li>Nested Item 2.2.2.2</li>
+                                </ul>
+                            </li>
+                            <li>Nested Item 2.2.3</li>
+                        </ul>
+                    </li>
+                    <li>Nested Item 2.3</li>
+                </ol>
+            </li>
+            <li>List Item 3
+                <ul type="disc">
+                    <li>Nested Item 3.1</li>
+                    <li>Nested Item 3.2</li>
+                    <li>Nested Item 3.3</li>
+                </ul>
+            </li>    
+        </ol>
         <!--
             h: heading
             h1 đến h6
@@ -16,8 +73,12 @@
             img = image
                 src = source
                 alt = alternative
-            audio
+            audio 
+                controls (attribute)
+                source (tab)
             video
+                controls (attribute)
+                source (tab)
         -->
         <img src="https://james.codegym.vn/pluginfile.php/1/theme_remui/faviconurl/1675179018/icon.png" alt="Logo CodeGym">
         <audio controls>
