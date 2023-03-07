@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <!-- các atributes của input trong form
+        type    = text: chưa văn bản
+                = email: dữ liệu phải có định dạng email
+                = radio: option (single choice)
+                = tel (telephone) định dạng số điện thoại (US Format)
+        placeholder: label hiển thị trong input
+        required: bắt buộc phải nhập dữ liệu cho input
+     -->
+    <form action="">
+        <table>
+            <caption>
+                <h2>General Admission Registration</h2>
+            </caption>
+            <tr>
+                <td valign="top" width="250px">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>
+                                    <input type="text" placeholder="First name" style="width: 70px;">
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Last name" style="width: 70px;">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td colspan="2">
+                                    <input type="email" placeholder="sample@example.com" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>
+                                    <input type="radio" name="gender"> Male
+                                </td>
+                                <td>
+                                    <input type="radio" name="gender"> Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td colspan="2">
+                                    <input type="tel">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Emergency Contact</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Do you requre parking?</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="radio" name="parking"> Yes
+                                </td>
+                                <td>
+                                    <input type="radio" name="parking"> No
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">What is your room preference</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <input type="radio" name="preference"> Single Room <br>
+                                    <input type="radio" name="preference"> Shared Room <br>
+                                    <input type="radio" name="preference"> No Room Needed
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td width="250px">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">Do you have dietary restriction?</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input name="restriction" type="radio"> None <br>
+                                    <input name="restriction" type="radio" checked> Vegetarian <br>
+                                    <input name="restriction" type="radio"> Glutten Allery <br>
+                                    <input name="restriction" type="radio"> Lactose Allery <br>
+                                    <input name="restriction" type="radio"> Nut Allegy <br>
+                                    <input name="restriction" type="radio"> Shelfish Allery
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">What activities will you attend?</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input name="attend" type="radio" checked> Awards Gala Dinner <br>
+                                    <input name="attend" type="radio"> Luncheon <br>
+                                    <input name="attend" type="radio"> Town Hall
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Do you want to see the list of other attendees and their profiles on the official event app?</td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    <input name="profile" type="radio">Yes
+                                </td>
+                                <td >
+                                    <input name="profile" type="radio">No
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
