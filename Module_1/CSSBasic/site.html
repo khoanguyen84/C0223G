@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        /* p::before{
+            content: "+ ";
+        } */
+        p::after{
+            content: " !";
+        }
+        p::first-letter{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        p::selection{
+            background-color: red;
+            color: yellow;
+        }
+
+        ul{
+            list-style-image: url('https://www.w3schools.com/cssref/sqpurple.gif');
+        }
+        ul>li::marker{
+        }
+        /* ul>li{
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dicta</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dicta</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dicta</p>
+</body>
+</html>

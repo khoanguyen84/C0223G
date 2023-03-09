@@ -1,0 +1,31 @@
+*{
+    /* font-size: 20px; */
+}
+h1 {
+    color: white;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+h1:hover{
+    background-color: yellow;
+    cursor: pointer;
+    border-radius: 0%;
+}
+#pId{
+    font-weight: bolder;
+    font-style: italic;
+}
+.cls_1{
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2, h6, #pId{
+    color: orange;
+    box-shadow: 3px 3px 3px red;
+    width: 120px;
+}
+input[type='checkbox']:checked{
+    transform: scale(2);
+}

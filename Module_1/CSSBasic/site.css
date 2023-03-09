@@ -1,0 +1,27 @@
+table,tr,td{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+}
+td{
+    padding: 25px;
+}
+table>tbody>tr>td:hover{
+    cursor: pointer;
+    background-color: gray !important;
+}
+table>tbody>tr:nth-child(odd)>td:nth-child(odd){
+    background-color: pink;
+}
+table>tbody>tr:nth-child(odd)>td:nth-child(even){
+    background-color: black;
+}
+table>tbody>tr:nth-child(even)>td:nth-child(even){
+    background-color: pink;
+}
+table>tbody>tr:nth-child(even)>td:nth-child(odd){
+    background-color: black;
+}
+
+div{
+    /* background-color:green !important; */
+}
