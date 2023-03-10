@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Light</title>
+    <style>
+        .turnOn{
+            background-image: url('images/btnOn.png');
+            width: 148px;
+            height: 66px;
+            border: none;
+            border-radius: 30px;
+            color: transparent;
+        }
+        .turnOff{
+            background-image: url('images/btnOff.png');
+            width: 148px;
+            height: 66px;
+            border: none;
+            border-radius: 30px;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <img class="light" src="images/off.png" alt=""
+        onmouseover="controlLight()"
+        onmouseout="controlLight()"
+    >
+    <button class="turnOn" id="switch" onclick="controlLight()">Turn On</button>
+
+    <script src="light.js"></script>
+</body>
+</html>
