@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    Average Score
+                </td>
+                <td>
+                    <input type="number" id="aveScore">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <button onclick="rank()">Rank</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="text" id="result" disabled>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // function rank() {
+        //     let aveScore = +document.getElementById('aveScore').value;
+        //     let result = "";
+        //     if (aveScore < 0 || aveScore > 10) {
+        //         result = "Invalid score";
+        //     }
+        //     else if (aveScore >= 9) {
+        //         result = "Xuất sắc";
+        //         }
+        //         else if (aveScore >= 8) {
+        //             result = "Giỏi"
+        //             }
+        //                 else if (aveScore >= 7) {
+        //                     result = "Khá"
+        //                 }
+        //                     else if (aveScore >= 5) {
+        //                         result = "Trung bình"
+        //                     }
+        //                     else {
+        //                         result = "Yếu"
+        //                     }
+        //     document.getElementById('result').value = result;
+        // }
+
+        // document.body.innerHTML = `<button onclick="alert('chào bà con)" >Say hi</button>`
+        // function rank() {
+        //     let aveScore = +document.getElementById('aveScore').value;
+        //     let result = "";
+        //     switch (true) {
+        //         case (aveScore >= 9 && aveScore <= 10): {
+        //             result = "Xuất sắc";
+        //             break;
+        //         }
+        //         case (aveScore >= 8 && aveScore < 9):{
+        //             result = "Giỏi";
+        //             break;
+        //         }
+        //         case (aveScore >= 7 && aveScore < 8):{
+        //             result = "Khá";
+        //             break;
+        //         }
+        //         case (aveScore >= 5 && aveScore < 7): {
+        //             result = "Trung bình";
+        //             break;
+        //         }
+        //         case (aveScore >= 0 && aveScore < 5):{
+        //             result = "Yếu"
+        //             break;
+        //         }
+        //         default : {
+        //             result = "Invalid Score";
+        //             break;
+        //         }
+        //     }
+        //     document.getElementById('result').value = result;
+        // }
+        function rank() {
+            let aveScore = +document.getElementById('aveScore').value;
+            let result = `${(aveScore < 0 || aveScore > 10) ? "Invalid score" :
+                (aveScore >= 9 && aveScore < 10) ? "Xuất sắc" :
+                    (aveScore >= 8 && aveScore < 9) ? "Giỏi" :
+                        (aveScore >= 7 && aveScore < 8) ? "Khá" :
+                            (aveScore >= 5 && aveScore < 7) ? "Trung bình" : "Yếu"}`;
+            document.getElementById('result').value = result;
+        }
+    </script>
+</body>
+
+</html>
