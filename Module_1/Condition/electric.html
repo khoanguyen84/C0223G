@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Electric</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>kWh</td>
+                <td>
+                    <input id="kwh" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Total Amount</td>
+                <td>
+                    <input id="amount" type="text" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="calculate()">Calculate</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function calculate() {
+            // convert string -> number
+            let kwh = Number(document.getElementById('kwh').value);
+            let result;
+            // if (kwh < 0) {
+            //     result = "Invalid kWh";
+            // }
+            // else if (kwh <= 50) {
+            //     result = kwh * 1678;
+            // }
+            // else if (kwh <= 100) {
+            //     result = 50 * 1678 + (kwh - 50) * 1734;
+            // }
+            // else if(kwh <= 200){
+            //     result = 50 * 1678 + 50 * 1734 + (kwh - 100) * 2014;
+            // }
+            // else if (kwh <= 300){
+            //     result = 50 * 1678 + 50 * 1734 + 100 * 2014 + (kwh - 200) * 2536;
+            // }
+            // else if(kwh <= 400){
+            //     result = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (kwh - 300) * 2834;
+            // }
+            // else {
+            //     result = 50 * 1678 + 
+            //             50 * 1734 + 
+            //             100 * 2014 + 
+            //             100 * 2536 + 
+            //             100 * 2834 + (kwh - 400) * 2927;
+            // }
+
+            // switch(true){
+            //     case (kwh < 0): {
+            //         result = "Invalid kWh";
+            //         break;
+            //     }
+            //     case (kwh <= 50): {
+            //         result = kwh * 1678;
+            //         break;
+            //     }
+            //     case (kwh <= 100):{
+            //         result = 50 * 1678 + (kwh - 50) * 1734;
+            //         break;
+            //     }
+            // }
+            result = kwh < 0 ? "Invalid kWh" :
+                                (kwh <= 50) ? kwh * 1678 : 
+                                    (kwh <= 100) ? 50 * 1678 + (kwh - 50) * 1734 :
+                                    'a'
+            document.querySelector('#amount').value = result;
+        }
+    </script>
+</body>
+
+</html>
