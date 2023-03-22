@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faking</title>
+</head>
+
+<body>
+    <textarea id="area" cols="50" rows="10" onkeydown="enterValue()"></textarea>
+    <!-- <textarea cols="50" rows="10"
+        onkeydown="enterValue(event)"
+    ></textarea> -->
+
+    <script>
+        // function enterValue(e){
+        //     console.log(e.target.value);
+        // }
+        let count = 0;
+        var characters = ['C', 'o', 'd', 'e', 'G', 'y', 'm', ' ', 'H', 'u', 'e']
+        let str = "";
+        function enterValue() {
+            setTimeout(function () {
+                if (count == characters.length) {
+                    count = 0;
+                    str = "";
+                    document.getElementById('area').value = "";
+                }
+                else {
+                    str += characters[count];
+                    document.getElementById('area').value = str;
+                    count++;
+                }
+            }, 1)
+        }
+
+        let output = '';
+        var a = new Array();
+        // var Fraud = new Array('C', 'o', 'd', 'e', 'G', 'y', 'm', ' ', 'f', 'o', 'r', ' ', 'l', 'i', 'f', 'e', '!');
+        a[1] = 'T'; a[2] = 'Ô'; a[3] = 'I'; a[4] = ' '; a[5] = 'L'; a[6] = 'À'; a[7] = ' '; a[8] = 'M'; a[9] = 'Ộ'; a[10] = 'T'; a[11] = ' '; a[12] = 'Đ'; a[13] = 'Ứ'; a[14] = 'A'; a[15] = ' '; a[16] = 'N'; a[17] = 'G'; a[18] = 'Ố'; a[19] = 'C'; a[20] = '!'; a[21] = '!'; a[22] = '!';
+        function writedown() {
+            let read = document.getElementById("textes").value;
+            let j = read.length;
+            if (j > 0) {
+                for (var i = 1; i <= j; i++) {
+                    output = output + a[i];
+                    if (i == a.length) {
+                        document.getElementById("textes").value = '';
+                        output = '';
+                    }
+                }
+            }
+            document.getElementById("textes").value = output;
+            output = '';
+            setTimeout("writedown()",1)
+            //
+        }
+
+        // function enterValue(e) {
+        //     if (count == characters.length) {
+        //         count = 0;
+        //         str = "";
+        //         e.target.value = "";
+        //     }
+        //     else {
+        //         str += characters[count];
+        //         e.target.value = str;
+        //         count++;
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
