@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Quicksand", sans-serif;
+}
+
+.container{
+    width: 900px;
+    margin: 0px auto;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+}
+
+.product-photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.product{
+    width: 33.33%;
+    display: block;
+    padding: 10px;
+}
+
+.product-photo>.quick-view{
+    display: none;
+}
+
+.product-photo:hover>.quick-view{
+    display: block;
+}
+
+.quick-view{
+    background-color: red;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+
+.photo{
+    width: 100%;
+}
+
+.category{
+    color:gray;
+}
+
+.coffee-name{
+    color: red;
+}
+.price{
+    font-weight: bolder;
+}
