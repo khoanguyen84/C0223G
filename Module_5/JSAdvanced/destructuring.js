@@ -27,6 +27,6 @@ let std_2 = {
     }
 }
 
-let { email, language } = std_2
+let { email, language: lang } = std_2
 
-console.log(language);
+console.log(lang);
