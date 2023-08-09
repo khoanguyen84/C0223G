@@ -1,0 +1,13 @@
+.form-group{
+    display: flex;
+    width: 400px;
+}
+.form-group>label{
+    width: 80px;
+}
+
+.heading_1{
+    background-color: green;
+    color: white;
+    padding: 5px 0px;
+}
