@@ -7,6 +7,9 @@ import Counter from './components/UseState/Counter';
 import DrinkBeer from './components/UseState/DrinkBeer';
 import UseState from './components/UseState/UseState';
 import Login from './components/UseState/Login';
+import Register from './components/UseState/Register';
+import Cart from './components/UseState/Cart';
+import PlayList from './components/UseState/PlayList';
 
 function App() {
   return (
@@ -15,7 +18,7 @@ function App() {
       <Main/>
       <Footer/> */}
       <MainLayout>
-        <Login />
+        <PlayList />
       </MainLayout>
     </>
   );
