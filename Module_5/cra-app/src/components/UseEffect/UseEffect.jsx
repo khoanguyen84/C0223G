@@ -30,6 +30,8 @@ function UseEffect() {
             setLoading(false)
         }
         getPostList();
+        console.log('callback');
+        return () => console.log('cleanup function');
     }, [currentPage])
 
     const handlePreviousPage = () => {
