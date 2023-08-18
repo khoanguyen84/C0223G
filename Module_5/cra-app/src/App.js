@@ -1,4 +1,5 @@
 import './App.css';
+import Register from './components/Register/Register';
 import Footer from './components/layout/Footer';
 import MainLayout from './components/layout/MainLayout';
 import Navabar from './components/layout/Navbar'
@@ -11,7 +12,7 @@ function App() {
       <Main/>
       <Footer/> */}
       <MainLayout>
-        <Main />
+        <Register />
       </MainLayout>
     </>
   );
