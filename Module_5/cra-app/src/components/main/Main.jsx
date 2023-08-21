@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Main() {
+    useEffect(() => {
+
+        return () => {
+            console.log('unmounted main component');
+        }
+        
+    }, [])
     return (
         <main className="flex-shrink-0 vh-100">
             <div className="container">
