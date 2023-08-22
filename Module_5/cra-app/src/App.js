@@ -7,9 +7,6 @@ import Main from './components/main/Main';
 function App() {
   return (
     <>
-      {/* <Navabar/>
-      <Main/>
-      <Footer/> */}
       <MainLayout>
         <Main />
       </MainLayout>
