@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from '../../assets/images/logo.jpg'
+import { themeContext } from "../../Context/ThemeProvider";
 
 function Navbar() {
+    const { theme, setTheme } = useContext(themeContext)
     return (
-        <nav className="navbar navbar-expand-md navbar-dark bg-danger">
+        <nav className={`navbar navbar-expand-md ${theme}`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    <img className="logo-sm rounded-circle" src={logo} alt=""/> 
+                    <img className="logo-sm rounded-circle" src={logo} alt="" />
                     CRA
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +26,15 @@ function Navbar() {
                             <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    <div className="dropdown">
+                        <button className="btn btn-secondary">
+                            Theme
+                        </button>
+                        <ul className="dropdown-menu">
+                            <li><button className="dropdown-item" onClick={() => setTheme('light')}>Light</button></li>
+                            <li><button className="dropdown-item" onClick={() => setTheme('dark')}>Dark</button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>

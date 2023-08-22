@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Paragraph from "../Paragraph/Paragraph";
+import { themeContext } from "../../Context/ThemeProvider";
 
-function Content(props) {
-    const { theme, handleChangeTheme } = props;
+function Content() {
+    const { theme } = useContext(themeContext)
     return (
         <>
             <div className={theme}>
@@ -11,9 +12,7 @@ function Content(props) {
                 <p>Back to <a href="/docs/5.0/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
             </div>
 
-            <Paragraph theme = {theme}
-                        handleChangeTheme = {handleChangeTheme}
-            />
+            <Paragraph />
         </>
     )
 }
