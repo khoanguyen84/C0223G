@@ -1,4 +1,5 @@
 import './App.css';
+import Todo from './components/TodoList/Todo';
 import Footer from './components/layout/Footer';
 import MainLayout from './components/layout/MainLayout';
 import Navabar from './components/layout/Navbar'
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       <MainLayout>
-        <Main />
+        <Todo />
       </MainLayout>
     </>
   );
